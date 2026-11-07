@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    long int N;
+    long long N;
     cin>>N;
-    vector<long int>A(N);
+    vector<long long>A(N);
     for(int i=0; i<N;i++){
         cin>>A[i];
     }
-    long int operation=INT_MIN;
+    long long operation=LLONG_MAX;
     for(int i=0;i<N;i++)
         operation=min(operation, abs(A[i]));
     cout<<operation<<endl;
