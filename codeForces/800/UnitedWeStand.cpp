@@ -25,11 +25,13 @@ int main(){
         }else{
             cout<<b.size()<<" "<<c.size()<<endl;
             for(auto it: b){
-                cout<< it<<" "<<endl;
+                cout<< it<<" ";
             }
+            cout<<endl;
             for(auto it: c){
-                cout<< it<<" "<<endl;
+                cout<< it<<" ";
             }
+            cout<<endl;
         }
     }
 }
