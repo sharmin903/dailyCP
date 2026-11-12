@@ -19,7 +19,7 @@ int main(){
                     a[i]-1;
                 }while(i=n);
             }else{
-                cout<<
+                cout<< 0<<endl;
             }
         }
     }
