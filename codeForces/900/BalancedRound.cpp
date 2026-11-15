@@ -12,8 +12,16 @@ int main(){
 
         long long count=1;
         long long max_length=1;
-        for(int i=0; i<n;i++){
-            
+        for(int i=1; i<n;i++){
+            if(a[i]-a[i-1]<=k){
+                count++;
+            }
+            else{
+                count=1;
+            }
+            max_length=max(max_length,count);
         }
+        cout<<n-max_length<<endl;
     }
+    return 0;
 }
