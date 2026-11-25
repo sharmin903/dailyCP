@@ -6,22 +6,14 @@ int main(){
     while(t--){
         int n;
         cin>>n;
-        int arr[20];
-        for(int i=0; i<n;i++){
-            cin>>arr[i];
+        vector<int>arr(n);
+        for(int i=0;i<n;i++)cin>>arr[i];
+        int k= abs(arr[0]-1);
+        for(int i=1; i<n;i++){
+            k=gcd(k,abs(arr[i] - (i + 1)));
         }
-        bool isSwaped=false;
-        for(int i=0;i<n;i++){
-            for(int j=0; j<n;j++){
-                if(arr[j]>arr[j+1]){
-                    swap(arr[j],arr[j+1]);
-                    isSwaped=true;
-                }
-            }
-        }
-        for(int i=0;i<n;i++){
-            cout<<arr[i];
-        }
-
+        cout<<k<<endl;
+        
     }
+    return 0;
 }
